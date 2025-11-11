@@ -46,6 +46,11 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_RBAC_CREDENTIALS }}
 
+    - name: Check repo structure
+      run: |
+        echo "Listing repository files:"
+        ls -R
+
     - name: 'Docker Login'
       uses: azure/docker-login@v1
       with:
