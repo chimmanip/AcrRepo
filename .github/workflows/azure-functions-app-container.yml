@@ -64,7 +64,7 @@ jobs:
         # If your function app project is not located in your repository's root
         # Please change the path to your directory for docker build
         docker build \
-          -f src/AcrRepo/AcrFuncTest/Dockerfile \
+          -f AcrFuncTest/Dockerfile \
           -t ${{ env.REGISTRY }}/${{ env.IMAGE }}:${{ env.TAG }} \
           src/AcrRepo/AcrFuncTest
         docker push ${{ env.REGISTRY }}/${{ env.IMAGE }}:${{ env.TAG }}
