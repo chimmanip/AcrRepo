@@ -29,7 +29,7 @@ permissions:
 env:
   AZURE_FUNCTIONAPP_NAME: 'testfuncacrimg'   # set this to your function app name on Azure
   LOGIN_SERVER: 'funcacr.azurecr.io'              # set this to login server for your private container registry (e.g. 'contoso.azurecr.io', 'index.docker.io' )
-  REGISTRY: 'funcacr'                 # set this to proper value for REGISTRY
+  REGISTRY: 'funcacr.azurecr.io'                 # set this to proper value for REGISTRY
   IMAGE: 'myfuncimage'                       # set this to proper value for IMAGE
   TAG: 'latest'                           # set this to proper value for TAG
 
