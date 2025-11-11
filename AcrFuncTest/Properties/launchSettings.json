@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "AcrFuncTest": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7219"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "containerRunArguments": "--init",
+      "httpPort": 31317,
+      "useSSL": false
+    }
+  }
+}
