@@ -22,14 +22,15 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Test SCM endpoint reachability
+        shell: bash
         run: |
           endpoint="testfuncdeployment.scm.azurewebsites.net"
           echo "Checking connectivity to $endpoint:443 ..."
           if nc -zvw5 $endpoint 443; then
-             echo "SCM is reachable."
+          echo "SCM is reachable."
           else
-            echo "SCM is NOT reachable. Deployment will timeout."
-            exit 1
+          echo "SCM is NOT reachable. Deployment will timeout."
+          exit 1
           fi
 
       - name: Setup DotNet ${{ env.DOTNET_VERSION }} Environment
@@ -53,3 +54,4 @@ jobs:
           package: '${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/output'
 
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_87944A91F9814D8998D8322B627F20F3 }}
+
